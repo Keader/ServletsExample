@@ -11,54 +11,57 @@ import java.util.HashMap;
 
 @WebServlet("/cadastro")
 public class Register extends HttpServlet {
-
-    private HashMap<String, String> usuarios = new HashMap();
+    private HashMap<String, String> users = new HashMap();
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String email = req.getParameter("email");
         String senha = req.getParameter("senha");
-        String ehCadastro = req.getParameter("ehCadastro");
+        HttpSession session = req.getSession(true);
+        boolean login = session.getAttribute("login") != null;
 
         if (email == null || senha == null) {
             req.getRequestDispatcher("cadastro.jsp").forward(req, resp);
             return;
         }
 
-        if (ehCadastro.equals("true")) {
+        if (!login) {
 
-            if (usuarios.containsKey(email)) {
+            if (users.containsKey(email)) {
                 req.getRequestDispatcher("cadastro.jsp").forward(req, resp);
                 return;
             }
 
-            usuarios.put(email, senha);
+            users.put(email, senha);
+            session.setAttribute("login", true);
             req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
         // Login
         else {
 
-            if (!usuarios.containsKey(email)){
+            if (!users.containsKey(email)) {
+                session.setAttribute("login", null);
                 req.getRequestDispatcher("cadastro.jsp").forward(req, resp);
                 return;
             }
 
-            if (usuarios.get(email).equals(senha)) {
+            if (users.get(email).equals(senha)) {
+                User user = new User(email, senha);
+                int time = (int) (System.currentTimeMillis() - session.getCreationTime())/1000;
 
-                Usuario user = new Usuario(email, senha);
-                HttpSession session = req.getSession(true);
-                int tempo = (int) (System.currentTimeMillis() - session.getCreationTime())/1000;
-
-                if (tempo > 30) {
-                    req.getRequestDispatcher("/login.jsp").forward(req, resp);
+                if (time > 30) {
                     session.invalidate(); // delete session
+                    session = req.getSession(true); // make a new one
+                    session.setAttribute("login", true); 
+                    req.getRequestDispatcher("/login.jsp").forward(req, resp);
                     return;
                 }
 
-                user.setTempo(tempo);
+                user.setTempo(time);
                 req.setAttribute("usuario", user);
                 req.getRequestDispatcher("/index.jsp").forward(req, resp);
             }
-
+            else
+                req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
     }
 }

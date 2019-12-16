@@ -11,6 +11,6 @@
     <title>Sistema</title>
   </head>
   <body>
-  <h2> Usuário ${usuario.usuario} está logado há ${usuario.tempo} segundos </h2>
+  <h2> Usuário ${usuario.usuario} está logado há ${usuario.tempo} segundos. </h2>
   </body>
 </html>

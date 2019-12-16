@@ -2,20 +2,20 @@ package dev.keader.act5;
 
 import java.io.Serializable;
 
-public class Usuario implements Serializable {
+public class User implements Serializable {
 
     private String usuario;
     private String senha;
     private int tempo;
-    private int logado;
+    private int cadastrado;
 
-    public Usuario() { }
+    public User() { }
 
-    public Usuario(String usuario, String senha) {
+    public User(String usuario, String senha) {
         this.usuario = usuario;
         this.senha = senha;
         tempo = 0;
-        logado = 0;
+        cadastrado = 0;
     }
 
     public String getUsuario() {
@@ -42,11 +42,11 @@ public class Usuario implements Serializable {
         this.tempo = tempo;
     }
 
-    public int getLogado() {
-        return logado;
+    public int getCadastrado() {
+        return cadastrado;
     }
 
-    public void setLogado(int logado) {
-        this.logado = logado;
+    public void setCadastrado(int logado) {
+        this.cadastrado = logado;
     }
 }

@@ -6,7 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9414fa7a-8f8b-45ae-aefa-3ed473de5496" name="Default Changelist" comment="" />
+    <list default="true" id="9414fa7a-8f8b-45ae-aefa-3ed473de5496" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Servlets_war_exploded/WEB-INF/classes/dev/keader/act5/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Servlets_war_exploded/WEB-INF/classes/dev/keader/act5/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Servlets_war_exploded/WEB-INF/classes/dev/keader/act5/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Servlets_war_exploded/WEB-INF/classes/dev/keader/act5/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Servlets_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Servlets_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Servlets/dev/keader/act5/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servlets/dev/keader/act5/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Servlets/dev/keader/act5/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servlets/dev/keader/act5/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/keader/act5/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/keader/act5/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/keader/act5/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/keader/act5/User.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +31,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -29,7 +42,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1UZ6o6NVZL0ZvUTSGHIMAU02ebA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -142,11 +157,22 @@
       <updated>1575551941538</updated>
       <workItem from="1575551944680" duration="2706000" />
       <workItem from="1576156240675" duration="5105000" />
-      <workItem from="1576501031139" duration="1613000" />
+      <workItem from="1576501031139" duration="2927000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
